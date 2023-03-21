@@ -41,12 +41,13 @@ public class main {
 
           /**  add some information to this map - any detail you consider relevant
             you will use a HashMap with the following structure <Person, List<Hobby>>*/
-
+        Person p6 = new Person("Evelina", 21);
         HashMap<String, List<String>> hashMap =new HashMap<>();
-        hashMap.put("Silvia", Arrays.asList("dancing", "boxing"));
 
-            HashMap<Person, List<Hobby>> hashMap =new HashMap<>()
-            hashMap.put("Silvia", Arrays.asList("dancing", "boxing"));
+        hashMap.put(String.valueOf(p6), Arrays.asList("dancing", "boxing"));
+
+//            HashMap<Person, List<Hobby>> hashMap =new HashMap<>()
+//            hashMap.put("Silvia", Arrays.asList("dancing", "boxing"));
      //        initial asa am pus, deoarece asa am inteles cerinta, dar nu mi-a mers.
 
         }
