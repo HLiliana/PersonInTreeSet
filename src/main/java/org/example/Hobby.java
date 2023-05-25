@@ -2,43 +2,41 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
- /**  you need to store some information about people: for one person, you need a list of his/her hobbies
- *define for Hobby a class that contains
- *name of the hobby (String) – ex: cycling, swimming
- *frequency (int) – how many times a week they practice it
- *list of addresses where this hobby can be practiced (List<Address>)
-  */
-public class Hobby{
 
-     private String hobbyName;
-     private int hobbyFrequency;
-     List<String> address;
+public class Hobby {
 
-     public Hobby(String hobbyName, int hobbyFrequency, List<String> address) {
-         this.hobbyName = hobbyName;
-         this.hobbyFrequency = hobbyFrequency;
-         this.address = address;
+    private String hobbyName;
+    private int frequencyPractice;
+    List<Address> addressList = new ArrayList<>();
 
-     }
+    public Hobby(String hobbyName, int frequencyPractice) {
+        this.hobbyName = hobbyName;
+        this.frequencyPractice = frequencyPractice;
+    }
 
-     public String getHobbyName() {
-         return hobbyName;
-     }
+    public void addAddress(Address address) {
+        addressList.add(address);
+    }
 
-     public int getHobbyFrequency() {
-         return hobbyFrequency;
-     }
+    public String getHobbyName() {
+        return hobbyName;
+    }
 
-     public void setHobbyName(String hobbyName) {
-         this.hobbyName = hobbyName;
-     }
+    public int getFrequencyPractice() {
+        return frequencyPractice;
+    }
 
-     public void setHobbyFrequency(int hobbyFrequency) {
-         this.hobbyFrequency = hobbyFrequency;
-     }
+    public List<Address> getAddressList() {
+        return addressList;
+    }
 
-
- }
+    @Override
+    public String toString() {
+        return "Hobby name is " + hobbyName + "it can be practiced frequently, like "
+                + frequencyPractice + " times a month, also the place where it can be practiced are: "
+                + addressList;
+    }
+}
 
 
 

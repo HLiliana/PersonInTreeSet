@@ -1,0 +1,16 @@
+- test for all methods
+
+- validation for input data
+
+- or read data from a csv file
+
+
+
+
+    public void printNameOfHobbyAndCountryPractice(Hobby hobby) {
+        System.out.println(hobby.getHobbyName().toUpperCase() + " can be practiced in: ");
+        for (Address address : hobby.getAddressList()) {
+            System.out.println(address.getCountry());
+        }
+        System.out.println();
+    }
